@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Jost", sans-serif;
+  list-style: none;
+  
+}
+
+// import
+@import 'variables';
+@import 'mixin';
+@import 'header';
+@import 'content';
+footer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer button {
+  @include buttonStyle();
+}

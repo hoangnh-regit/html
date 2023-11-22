@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
   scroll-behavior: smooth;
   font-family: "Jost", sans-serif;
   list-style: none;
-  text-decoration: none;
 }
 
 header {
@@ -14,89 +12,192 @@ header {
   height: 500px;
   background-repeat: no-repeat;
   align-items: center;
-  color: white;
-}
-
-header {
   width: 100%;
   height: 500px;
   z-index: 1000;
-}
-
-.logo .img {
-  max-width: 120px;
-  height: auto;
 }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: absolute;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px 10%;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 4px 2%;
 }
-
-.nav-menu {
+.menu i {
+  vertical-align: middle;
+  color: black;
+}
+.menu .nav-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.nav-menu a {
-  color: #2c2c2c;
+.menu .nav-menu a {
   font-size: 16px;
   text-transform: capitalize;
   padding: 10px 20px;
   font-weight: 400;
   transition: all 0.42s ease;
+  text-decoration: none;
+}
+.menu .nav-menu .box {
+  width: 374px;
+  height: 45px;
+  display: flex;
+  cursor: pointer;
+  padding: 10px 18px;
+  background-color: #fff;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu .nav-menu .box input {
+  outline: none;
+  border: none;
+  font-weight: 400;
+  transition: 0.8s;
+  background: transparent;
+}
+.menu .nav-menu .box a {
+  font-size: 18px;
+  margin-right: 2px;
+}
+.menu .nav-menu li a {
+  color: black;
+}
+.menu .nav-menu li i {
+  font-size: 30px;
+}
+.menu .nav-menu li .first {
+  color: white;
+  background-color: #770303;
+  width: 51px;
+  height: 31px;
+  border-radius: 2px;
+  margin: 50px;
+}
+.menu .nav-menu li .second {
+  padding-right: 100px;
+}
+.menu .nav-menu li .third {
+  padding-left: 20px;
 }
 
-.nav-menu a:hover {
-  color: red;
-}
-
-.nav-icon {
+section .list-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-top: 72.58px;
+  padding-bottom: 28px;
 }
-
-.nav-icon i {
-  margin-right: 20px;
-  color: #2c2c2c;
-  font-size: 25px;
+section .list-title h1 {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 72.4px;
+}
+section .list-title .category {
+  width: 144px;
+  height: 40px;
+}
+section .list-title .category select {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #DEDEDE;
+  border-radius: 4px;
+}
+section .card {
+  width: 417px;
+  padding: 0;
+  margin-bottom: 70px;
+}
+section .card img {
+  width: 100%;
+  height: 276px;
+}
+section .card .card-body .author-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: start;
   font-weight: 400;
-  transition: all 0.42s ease;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
-
-.nav-icon i:hover {
-  transform: scale();
+section .card .card-body .author-time h4 {
+  font-size: 18px;
+  padding-left: 21px;
+}
+section .card .card-body .author-time .author {
+  padding-left: 0;
+}
+section .card h6 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+section .card p {
+  font-weight: 400;
+  font-size: 18px;
+  padding-bottom: 29px;
+}
+section .card .read-more {
+  width: 137px;
+  height: 40px;
+  border: 1px solid #E4E4E4;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+}
+section .card .read-more a {
+  display: inline-block;
+  text-decoration: none;
   color: red;
 }
-
-#menu_icon {
-  font-size: 35px;
-  color: #2c2c2c;
-  z-index: 10002;
-  cursor: pointer;
+section .card .read-more i {
+  vertical-align: middle;
 }
-
-button2, button1 {
-  background-color: green;
-  border: 0;
-  padding: 5px 10px;
-  color: wheat;
+section .pagination {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
 }
-
-section button {
-  background-color: green;
-  border: 0;
-  padding: 5px 10px;
-  color: wheat;
+section .pagination li {
+  display: inline-block;
+  list-style: none;
 }
-section p {
-  color: red;
+section .pagination li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+  color: #252525;
+  border-radius: 4px;
+  margin: 5px;
+}
+section .pagination li a:hover, section .pagination li a.active {
+  color: #C40000;
+  background-color: #FFE4E4;
+  border-radius: 50%;
+}
+section li:first-child {
+  font-size: 40px;
+}
+section li:last-child {
+  font-size: 40px;
+}
+section i {
+  vertical-align: center;
 }
 
 footer {
@@ -111,4 +212,6 @@ footer button {
   border: 0;
   padding: 5px 10px;
   color: wheat;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
