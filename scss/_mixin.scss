@@ -1,3 +1,6 @@
+$mobile-width: 700px;
+$desktop-width: 700px;
+
 @mixin buttonStyle {
   background-color: $main-color;
   border: 0;
@@ -9,4 +12,149 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+    .menu {
+      display: none;
+    }
+    .menu-mobile {
+      .nav {
+        @include flexSpace();
+        width: 100%;
+        height: 69px;
+        position: absolute;
+        top: 0;
+        background-color: #ffffff;
+        padding: 4px 2%;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        i {
+          width: 19px;
+          height: 19px;
+        }
+      }
+      .navbar-links {
+        display: none;
+        width: 60%;
+        // background-color: rgba(170, 170, 170, 0.25);
+        ul {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          li {
+            // text-align: center;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            height: 100%;
+            a {
+              padding: 0.5rem 1rem;
+              text-decoration: none;
+              color: wheat;
+            }
+            a:hover {
+              color: white;
+              background-color: black;
+            }
+          }
+        }
+      }
+      .navbar-links.active {
+        display: flex;
+        position: absolute;
+        left: -26px;
+        top: 69px;
+      }
+    }
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+    .menu {
+      @include flexSpace();
+      display: flex-wrap;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 4px 2%;
+      i {
+        vertical-align: middle;
+        color: black;
+      }
+      .nav-menu {
+        @include flexSpace();
+        a {
+          font-size: 16px;
+          text-transform: capitalize;
+          padding: 10px 20px;
+          font-weight: 400;
+          transition: all 0.42s ease;
+          text-decoration: none;
+        }
+        .box {
+          width: 374px;
+          height: 45px;
+          cursor: pointer;
+          padding: 10px 18px;
+          background-color: #fff;
+          border-radius: 6px;
+          align-items: center;
+          justify-content: space-between;
+          padding-right: 0px;
+          position: relative;
+          input {
+            outline: none;
+            border: none;
+            font-weight: 400;
+            transition: 0.8s;
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            padding-right: 10px;
+          }
+          button {
+            border: none;
+            background-color: #fff;
+            width: 40px;
+            height: 100%;
+            margin-right: 5px;
+            top: 0;
+            right: 0;
+            position: absolute;
+          }
+        }
+        li {
+          a {
+            color: black;
+          }
+          i {
+            font-size: 30px;
+          }
+          .first {
+            color: white;
+            background-color: #770303;
+            width: 51px;
+            height: 31px;
+            border-radius: 2px;
+            margin: 50px;
+          }
+          .second {
+            padding-right: 100px;
+          }
+          .third {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
 }

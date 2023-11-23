@@ -1,3 +1,8 @@
+// import
+@import "variables";
+@import "mixin";
+@import "header";
+@import "content";
 * {
   margin: 0;
   padding: 0;
@@ -5,14 +10,7 @@
   scroll-behavior: smooth;
   font-family: "Jost", sans-serif;
   list-style: none;
-  
 }
-
-// import
-@import 'variables';
-@import 'mixin';
-@import 'header';
-@import 'content';
 footer {
   height: 94px;
   background-color: #000000;
@@ -20,7 +18,17 @@ footer {
   justify-content: center;
   align-items: center;
   color: #fff;
-  p{
+  p {
     margin: auto 0;
+  }
+}
+@include desktop {
+  .menu-mobile {
+    display: none;
+  }
+}
+@include mobile {
+  .menu {
+    display: none;
   }
 }
