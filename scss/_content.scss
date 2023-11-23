@@ -3,18 +3,18 @@ section {
     @include flexSpace();
     padding-top: 72.58px;
     padding-bottom: 28px;
-    h1{
+    h1 {
       font-weight: 700;
       font-size: 52px;
       line-height: 72.4px;
     }
-    .category{
+    .category {
       width: 144px;
       height: 40px;
-      select{
+      select {
         height: 100%;
         width: 100%;
-        border: 1px solid #DEDEDE;
+        border: 1px solid #dedede;
         border-radius: 4px;
       }
     }
@@ -24,7 +24,7 @@ section {
     height: 276px;
   }
   .card-body {
-    border: 1px solid #DEDEDE;
+    border: 1px solid #dedede;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     margin-bottom: 70px;
@@ -57,7 +57,7 @@ section {
     @include flexSpace();
     width: 137px;
     height: 40px;
-    border: 1px solid #E4E4E4;
+    border: 1px solid #e4e4e4;
     border-radius: 4px;
     justify-content: center;
     a {
@@ -68,7 +68,7 @@ section {
     i {
       vertical-align: middle;
     }
-  }    
+  }
   .pagination {
     @include flexSpace();
     margin: 0;
@@ -89,18 +89,27 @@ section {
         border-radius: 4px;
         margin: 5px;
       }
-      a:hover,a.active {
-        color: #C40000;
-        background-color: #FFE4E4;
+      a:hover,
+      a.active {
+        color: #c40000;
+        background-color: #ffe4e4;
         border-radius: 50%;
       }
     }
   }
   li:first-child {
     font-size: 40px;
+    a {
+      color: #c40000;
+      background-color: #ffe4e4;
+      border-radius: 50%;
+    }
   }
   li:last-child {
     font-size: 40px;
+    a {
+      color: #e5e5e5;
+    }
   }
   i {
     vertical-align: center;

@@ -11,6 +11,16 @@
   font-family: "Jost", sans-serif;
   list-style: none;
 }
+@include desktop {
+  .menu-mobile {
+    display: none;
+  }
+}
+@include mobile {
+  .menu {
+    display: none;
+  }
+}
 footer {
   height: 94px;
   background-color: #000000;
@@ -20,15 +30,5 @@ footer {
   color: #fff;
   p {
     margin: auto 0;
-  }
-}
-@include desktop {
-  .menu-mobile {
-    display: none;
-  }
-}
-@include mobile {
-  .menu {
-    display: none;
   }
 }
