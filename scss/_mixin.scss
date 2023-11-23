@@ -1,6 +1,4 @@
-$mobile-width: 700px;
-$desktop-width: 700px;
-
+$width: 700px;
 @mixin buttonStyle {
   background-color: $main-color;
   border: 0;
@@ -15,10 +13,10 @@ $desktop-width: 700px;
 }
 
 @mixin mobile {
-  @media (max-width: #{$mobile-width - 1px}) {
+  @media (max-width: #{$width - 1px}) {
     @content;
-    .menu {
-      display: none;
+    .img {
+      top: 69px;
     }
     .menu-mobile {
       .nav {
@@ -63,7 +61,7 @@ $desktop-width: 700px;
           }
         }
       }
-      .navbar-links.active {
+      .navbar-links.active {  
         display: flex;
         position: absolute;
         left: -26px;
@@ -72,9 +70,8 @@ $desktop-width: 700px;
     }
   }
 }
-
 @mixin desktop {
-  @media (min-width: #{$desktop-width}) {
+  @media (min-width: #{$width}) {
     @content;
     .menu {
       @include flexSpace();
