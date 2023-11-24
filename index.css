@@ -19,8 +19,11 @@ section .list-title {
 }
 section .list-title h1 {
   font-weight: 700;
-  font-size: 52px;
-  line-height: 72.4px;
+  font-size: 50px;
+  line-height: normal;
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  color: #000;
 }
 section .list-title .category {
   width: 144px;
@@ -29,11 +32,12 @@ section .list-title .category {
 section .list-title .category select {
   height: 100%;
   width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
   border: 1px solid #dedede;
   border-radius: 4px;
 }
 section img {
-  width: 100%;
+  width: 417px;
   height: 276px;
 }
 section .card-body {
@@ -46,27 +50,44 @@ section .card-body .author-time {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  justify-content: start;
+  align-items: start;
+  justify-content: flex-start;
   font-weight: 400;
   padding-top: 25px;
   padding-bottom: 15px;
 }
-section .card-body .author-time h4 {
+section .card-body .author-time span {
   font-size: 18px;
-  padding-left: 21px;
+  padding-left: 4px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: "SVN-Gilroy", sans-serif;
 }
-section .card-body .author-time .author {
-  padding-left: 0;
+section .card-body .author-time span i {
+  font-size: 24px;
+}
+section .card-body .author-time .author,
+section .card-body .author-time .time {
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 section h6 {
   font-size: 20px;
+  color: #211e3b;
+  font-family: "SVN-Gilroy", sans-serif;
   padding-bottom: 10px;
+  font-style: normal;
   font-weight: 700;
 }
 section p {
-  font-weight: 400;
+  color: #211e3b;
+  font-family: "SVN-Gilroy", sans-serif;
   font-size: 18px;
-  padding-bottom: 29px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
 }
 section .read-more {
   display: flex;
@@ -78,10 +99,16 @@ section .read-more {
   border-radius: 4px;
   justify-content: center;
 }
+section .read-more:hover {
+  background-color: #c40000;
+}
+section .read-more:hover a {
+  color: #fff;
+}
 section .read-more a {
+  color: red;
   display: inline-block;
   text-decoration: none;
-  color: red;
 }
 section .read-more i {
   vertical-align: middle;
@@ -106,10 +133,13 @@ section .pagination li a {
   background-color: #fff;
   text-align: center;
   text-decoration: none;
-  color: #252525;
+  color: #211E3B;
+  font-family: SVN-Gilroy;
+  font-weight: 700;
   border-radius: 4px;
   margin: 5px;
 }
+section .pagination li a:hover,
 section .pagination li a.active {
   color: #c40000;
   background-color: #ffe4e4;
@@ -155,7 +185,7 @@ section .pagination li i {
     width: 100%;
     top: 0;
     background-color: rgba(255, 255, 255, 0.25);
-    padding: 4px 2%;
+    padding: 4px 4%;
   }
   .menu i {
     vertical-align: middle;
@@ -196,6 +226,14 @@ section .pagination li i {
     height: 100%;
     padding-right: 10px;
   }
+  .menu .nav-menu .box input.search {
+    color: #d4d1d4;
+    font-family: Noto Sans JP;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
   .menu .nav-menu .box button {
     border: none;
     background-color: #fff;
@@ -206,22 +244,30 @@ section .pagination li i {
     right: 0;
     position: absolute;
   }
+  .menu .nav-menu .box button i {
+    color: #a7a7a7;
+    font-size: 19px;
+  }
   .menu .nav-menu li a {
     color: black;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
   }
   .menu .nav-menu li i {
-    font-size: 30px;
+    font-size: 26.67px;
   }
   .menu .nav-menu li .first {
     color: white;
     background-color: #770303;
     width: 51px;
     height: 31px;
-    border-radius: 2px;
+    border-radius: 3px;
     margin: 50px;
   }
   .menu .nav-menu li .second {
-    padding-right: 100px;
+    padding-right: 140px;
+    padding-left: 0;
   }
   .menu .nav-menu li .third {
     padding-left: 20px;
@@ -291,10 +337,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
 }
 footer p {
   margin: auto 0;
+  color: #fff;
+  font-family: Noto Sans JP;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=index.css.map */
