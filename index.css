@@ -203,7 +203,7 @@ section img {
 }
 section .card-body {
   border: 1px solid #dedede;
-  border-radius: 0 10px;
+  border-radius: 0 0 15px 15px;
   margin-bottom: 70px;
 }
 section .card-body .author-time {
