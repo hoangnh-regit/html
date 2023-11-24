@@ -8,18 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Jost", sans-serif;
   list-style: none;
-}
-@include desktop {
-  .menu-mobile {
-    display: none;
-  }
-}
-@include mobile {
-  .menu {
-    display: none;
-  }
 }
 footer {
   height: 94px;
@@ -30,7 +19,7 @@ footer {
   p {
     margin: auto 0;
     color: #fff;
-    font-family: Noto Sans JP;
+    font-family: $font-noto-san-jp;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;

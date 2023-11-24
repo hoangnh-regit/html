@@ -1,13 +1,12 @@
 section {
   .list-title {
     @include flexSpace();
-    padding-top: 72.58px;
-    padding-bottom: 28px;
+    padding: 72.58px 0 28px 0;
     h1 {
       font-weight: 700;
       font-size: 50px;
       line-height: normal;
-      font-family: "Noto Sans JP", sans-serif;
+      font-family: $font-noto-san-jp;
       font-style: normal;
       color: #000;
     }
@@ -17,7 +16,7 @@ section {
       select {
         height: 100%;
         width: 100%;
-        font-family: "Noto Sans JP", sans-serif;
+        font-family: $font-noto-san-jp;
         border: 1px solid #dedede;
         border-radius: 4px;
       }
@@ -29,64 +28,48 @@ section {
   }
   .card-body {
     border: 1px solid #dedede;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 0 10px;
     margin-bottom: 70px;
     .author-time {
       @include flexSpace();
       align-items: start;
       justify-content: flex-start;
       font-weight: 400;
-      padding-top: 25px;
-      padding-bottom: 15px;
+      padding: 25px 0 15px 0;
       span {
-        font-size: 18px;
-        padding-left: 4px;
-        font-weight: 400;
-        line-height: 30px;
-        font-family: "SVN-Gilroy", sans-serif;
+        @include fontStyle(#211e3b, $font-gyloy, 18px, 400);
         i {
           font-size: 24px;
         }
       }
       .author,
       .time {
-        padding-right: 20px;
         @include flexSpace();
+        padding-right: 20px;
       }
     }
   }
   h6 {
-    font-size: 20px;
-    color: #211e3b;
-    font-family: "SVN-Gilroy", sans-serif;
-    padding-bottom: 10px;
-    font-style: normal;
-    font-weight: 700;
+    @include fontStyle(#211e3b, $font-gyloy, 20px, 700);
   }
   p {
-    color: #211e3b;
-    font-family: "SVN-Gilroy", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
+    @include fontStyle(#211e3b, $font-gyloy, 18px, 400);
   }
   .read-more {
-    &:hover {
-      background-color: #c40000;
-      a {
-        color: #fff;
-      }
-    }
     @include flexSpace();
     width: 137px;
     height: 40px;
     border: 1px solid #e4e4e4;
     border-radius: 4px;
     justify-content: center;
+    &:hover {
+      background-color: $color-r;
+      a {
+        color: #fff;
+      }
+    }
     a {
-      color: red;
+      color: $color-r;
       display: inline-block;
       text-decoration: none;
     }
@@ -102,6 +85,20 @@ section {
     li {
       display: inline-block;
       list-style: none;
+      &:first-child {
+        font-size: 40px;
+        a {
+          color: $color-r;
+          background-color: $color-p;
+          border-radius: 50%;
+        }
+      }
+      &:last-child {
+        font-size: 40px;
+        a {
+          color: #e5e5e5;
+        }
+      }
       a {
         display: block;
         width: 40px;
@@ -110,30 +107,16 @@ section {
         background-color: #fff;
         text-align: center;
         text-decoration: none;
-        color: #211E3B;
-        font-family: SVN-Gilroy;
+        color: #211e3b;
+        font-family: $font-noto-san-jp;
         font-weight: 700;
         border-radius: 4px;
         margin: 5px;
-      }
-      a:hover,
-      a.active {
-        color: #c40000;
-        background-color: #ffe4e4;
-        border-radius: 50%;
-      }
-      &:first-child {
-        font-size: 40px;
-        a {
-          color: #c40000;
-          background-color: #ffe4e4;
+        &:active,
+        &:hover {
+          color: $color-r;
+          background-color: $color-p;
           border-radius: 50%;
-        }
-      }
-      &:last-child {
-        font-size: 40px;
-        a {
-          color: #e5e5e5;
         }
       }
       i {
