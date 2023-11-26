@@ -18,11 +18,6 @@ footer {
   align-items: center;
   p {
     margin: auto 0;
-    color: #fff;
-    font-family: $font-noto-san-jp;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+    @include fontStyle(#fff , $font-noto-san-jp, 15px, 500);
   }
 }

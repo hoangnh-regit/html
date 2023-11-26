@@ -3,19 +3,12 @@ section {
     @include flexSpace();
     padding: 72.58px 0 28px 0;
     h1 {
-      font-weight: 700;
-      font-size: 50px;
-      line-height: normal;
-      font-family: $font-noto-san-jp;
-      font-style: normal;
-      color: #000;
+      @include fontStyle(#000, $font-noto-san-jp, 50px, 700);
     }
     .category {
-      width: 144px;
-      height: 40px;
+      @include widthHeight(144px, 40px);
       select {
-        height: 100%;
-        width: 100%;
+        @include widthHeight(100%, 100%);
         font-family: $font-noto-san-jp;
         border: 1px solid #dedede;
         border-radius: 4px;
@@ -23,8 +16,7 @@ section {
     }
   }
   img {
-    width: 417px;
-    height: 276px;
+    @include widthHeight(417px, 276px);
   }
   .card-body {
     border: 1px solid #dedede;
@@ -35,7 +27,7 @@ section {
       align-items: start;
       justify-content: flex-start;
       font-weight: 400;
-      padding: 25px 0 15px 0;
+      padding-bottom: 15px;
       span {
         @include fontStyle(#211e3b, $font-gyloy, 18px, 400);
         i {
@@ -45,7 +37,10 @@ section {
       .author,
       .time {
         @include flexSpace();
-        padding-right: 20px;
+        padding: 0 2%;
+        span {
+          margin-left: 5px;
+        }
       }
     }
   }
@@ -56,12 +51,10 @@ section {
     @include fontStyle(#211e3b, $font-gyloy, 18px, 400);
   }
   .read-more {
-    @include flexSpace();
-    width: 137px;
-    height: 40px;
+    @include flexCenter();
+    @include widthHeight(137px, 40px);
     border: 1px solid #e4e4e4;
     border-radius: 4px;
-    justify-content: center;
     &:hover {
       background-color: $color-r;
       a {
@@ -78,10 +71,9 @@ section {
     }
   }
   .pagination {
-    @include flexSpace();
+    @include flexCenter();
     margin: 0;
     padding: 10px;
-    justify-content: center;
     li {
       display: inline-block;
       list-style: none;
@@ -100,16 +92,13 @@ section {
         }
       }
       a {
+        @include fontStyle(#211e3b, $font-noto-san-jp, none, 700);
+        @include widthHeight(40px, 40px);
         display: block;
-        width: 40px;
-        height: 40px;
         line-height: 40px;
         background-color: #fff;
         text-align: center;
         text-decoration: none;
-        color: #211e3b;
-        font-family: $font-noto-san-jp;
-        font-weight: 700;
         border-radius: 4px;
         margin: 5px;
         &:active,
