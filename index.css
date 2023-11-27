@@ -167,34 +167,69 @@ header .img img {
   }
 }
 
-section .list-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 72.58px 0 28px 0;
+@media (max-width: 767px) {
+  section {
+    margin: 0 68px 0 64px;
+  }
+  section .list-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 72.58px 0 28px 0;
+  }
+  section .list-title h1 {
+    color: #000;
+    font-family: Noto Sans JP;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  section .list-title .category {
+    width: 144px;
+    height: 40px;
+  }
+  section .list-title .category select {
+    width: 100%;
+    height: 100%;
+    font-family: Noto Sans JP;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+  }
 }
-section .list-title h1 {
-  color: #000;
-  font-family: Noto Sans JP;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-section .list-title .category {
-  width: 144px;
-  height: 40px;
-}
-section .list-title .category select {
-  width: 100%;
-  height: 100%;
-  font-family: Noto Sans JP;
-  border: 1px solid #dedede;
-  border-radius: 4px;
+@media (min-width: 768px) {
+  section {
+    margin: 0 101px;
+  }
+  section .list-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 72.58px 0 28px 0;
+  }
+  section .list-title h1 {
+    color: #000;
+    font-family: Noto Sans JP;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  section .list-title .category {
+    width: 144px;
+    height: 40px;
+  }
+  section .list-title .category select {
+    width: 100%;
+    height: 100%;
+    font-family: Noto Sans JP;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+  }
 }
 section img {
-  width: 417px;
-  height: 276px;
+  width: 100%;
+  height: auto;
 }
 section .card-body {
   border: 1px solid #dedede;
@@ -322,29 +357,29 @@ section .pagination li i {
   vertical-align: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  list-style: none;
-}
-
 footer {
-  height: 94px;
-  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 94px;
+  background-color: #000000;
 }
 footer p {
-  margin: auto 0;
   color: #fff;
   font-family: Noto Sans JP;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin: auto 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
 }
 
 /*# sourceMappingURL=index.css.map */
