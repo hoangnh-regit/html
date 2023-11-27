@@ -9,10 +9,14 @@ header .img {
 @media (max-width: 767px) {
   header .img {
     top: 69px;
+    width: auto;
+    height: 454.493px;
   }
 }
-header .img img {
-  width: 100%;
+@media (min-width: 768px) {
+  header .img {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   header .menu {
@@ -29,6 +33,13 @@ header .img img {
     background-color: #fff;
     padding: 4px 2%;
   }
+  header .menu-mobile .nav .search-btn i {
+    color: #a7a7a7;
+    font-size: 19px;
+  }
+  header .menu-mobile .nav .toggle {
+    font-size: 35px;
+  }
   header .menu-mobile .nav a {
     text-decoration: none;
     color: black;
@@ -36,6 +47,7 @@ header .img img {
   header .menu-mobile .nav i {
     font-size: 35px;
     vertical-align: middle;
+    color: #292d32;
   }
   header .menu-mobile .navbar-links {
     display: none;
@@ -78,11 +90,13 @@ header .img img {
     align-items: center;
     justify-content: space-between;
     display: flex-wrap;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 4px 4%;
+    transition: top 0.8s;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 30px 102px;
+    height: 122px;
   }
   header .menu i {
     vertical-align: middle;
@@ -93,10 +107,12 @@ header .img img {
     align-items: center;
     justify-content: space-between;
   }
+  header .menu .nav-menu .logo {
+    padding-right: 33px;
+  }
   header .menu .nav-menu a {
     font-size: 16px;
     text-transform: capitalize;
-    padding: 10px 20px;
     font-weight: 400;
     transition: all 0.42s ease;
     text-decoration: none;
@@ -157,19 +173,23 @@ header .img img {
     color: white;
     background-color: #770303;
     border-radius: 3px;
-    margin: 50px;
+    padding: 10px 20px;
+    margin: 27px;
   }
   header .menu .nav-menu li .second {
-    padding: 0 140px 0 0;
+    padding: 0 106px 0 0;
   }
   header .menu .nav-menu li .third {
-    padding-left: 20px;
+    padding: 0;
+  }
+  header .menu .nav-menu li .fouth {
+    padding-left: 17px;
   }
 }
 
 @media (max-width: 767px) {
   section {
-    margin: 0 68px 0 64px;
+    margin: 69.5px 68px 0 64px;
   }
   section .list-title {
     display: flex;
@@ -189,12 +209,17 @@ header .img img {
     width: 144px;
     height: 40px;
   }
-  section .list-title .category select {
+  section .list-title .category .select {
     width: 100%;
     height: 100%;
+    padding-left: 20px;
     font-family: Noto Sans JP;
     border: 1px solid #dedede;
     border-radius: 4px;
+    appearance: none;
+    background-image: url(../images/ic_round-navigate-next.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
   }
 }
 @media (min-width: 768px) {
@@ -222,9 +247,14 @@ header .img img {
   section .list-title .category select {
     width: 100%;
     height: 100%;
+    padding-left: 20px;
     font-family: Noto Sans JP;
     border: 1px solid #dedede;
     border-radius: 4px;
+    appearance: none;
+    background-image: url(../images/ic_round-navigate-next.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
   }
 }
 section img {
@@ -261,7 +291,7 @@ section .card-body .author-time .time {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2%;
+  padding: 0 2% 0 0;
 }
 section .card-body .author-time .author span,
 section .card-body .author-time .time span {
@@ -304,6 +334,8 @@ section .read-more a {
   text-decoration: none;
 }
 section .read-more i {
+  padding-left: 8px;
+  font-size: 18px;
   vertical-align: middle;
 }
 section .pagination {
@@ -318,22 +350,23 @@ section .pagination li {
   list-style: none;
 }
 section .pagination li:first-child {
-  font-size: 40px;
+  font-size: 20px;
 }
 section .pagination li:first-child a {
-  color: #c40000;
-  background-color: #ffe4e4;
+  color: #ffe4e4;
+  background-color: #c40000;
   border-radius: 50%;
 }
 section .pagination li:last-child {
-  font-size: 40px;
+  font-size: 20px;
 }
 section .pagination li:last-child a {
-  color: #e5e5e5;
+  background-color: #e5e5e5;
+  border-radius: 50%;
 }
 section .pagination li a {
   color: #211e3b;
-  font-family: Noto Sans JP;
+  font-family: SVN-Gilroy;
   font-size: none;
   font-style: normal;
   font-weight: 700;

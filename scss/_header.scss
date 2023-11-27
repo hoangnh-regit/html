@@ -1,16 +1,17 @@
 header {
   height: auto;
-
   .img {
     @include mobile {
       top: 69px;
+      width: auto;
+      height: 454.493px;
+    }
+    @include desktop {
+      width: 100%;
     }
     width: 100%;
     height: auto;
     position: relative;
-    img {
-      width: 100%;
-    }
   }
 
   @include mobile {
@@ -26,6 +27,15 @@ header {
         top: 0;
         background-color: $color-3;
         padding: 4px 2%;
+        .search-btn {
+          i {
+            color: #a7a7a7;
+            font-size: 19px;
+          }
+        }
+        .toggle {
+          font-size: 35px;
+        }
         a {
           text-decoration: none;
           color: $color-6;
@@ -33,6 +43,7 @@ header {
         i {
           font-size: 35px;
           vertical-align: middle;
+          color: $color-7;
         }
       }
       .navbar-links {
@@ -74,21 +85,25 @@ header {
     .menu {
       @include flexSpace();
       display: flex-wrap;
-      position: absolute;
+      position: fixed;
       width: 100%;
       top: 0;
-      background-color: rgba(255, 255, 255, 0.25);
-      padding: 4px 4%;
+      transition: top 0.8s;
+      background-color: rgba(255, 255, 255, 0.65);
+      padding: 30px 102px;
+      height: 122px;
       i {
         vertical-align: middle;
         color: $color-6;
       }
       .nav-menu {
         @include flexSpace();
+        .logo {
+          padding-right: 33px;
+        }
         a {
           font-size: 16px;
           text-transform: capitalize;
-          padding: 10px 20px;
           font-weight: 400;
           transition: all 0.42s ease;
           text-decoration: none;
@@ -145,13 +160,17 @@ header {
             color: white;
             background-color: #770303;
             border-radius: 3px;
-            margin: 50px;
+            padding: 10px 20px;
+            margin: 27px;
           }
           .second {
-            padding: 0 140px 0 0;
+            padding: 0 106px 0 0;
           }
           .third {
-            padding-left: 20px;
+            padding: 0;
+          }
+          .fouth {
+            padding-left: 17px;
           }
         }
       }
