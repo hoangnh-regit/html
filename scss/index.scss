@@ -12,11 +12,11 @@
 }
 
 footer {
+  @include flexCenter();
   height: 94px;
   background-color: #000000;
-  @include flexCenter();
   p {
-    margin: auto 0;
     @include fontStyle($color-3, $font-noto-san-jp, 15px, 500);
+    margin: auto 0;
   }
 }
