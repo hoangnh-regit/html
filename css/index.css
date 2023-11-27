@@ -1,21 +1,23 @@
 header {
   height: auto;
 }
-header .img {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
 @media (max-width: 767px) {
   header .img {
     top: 69px;
-    width: auto;
+    width: 100%;
     height: 454.493px;
+    padding: 0;
+    margin-bottom: 70px;
   }
 }
 @media (min-width: 768px) {
+  header {
+    height: auto;
+    position: relative;
+  }
   header .img {
     width: 100%;
+    object-fit: contain;
   }
 }
 @media (max-width: 767px) {
@@ -89,7 +91,7 @@ header .img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    display: flex-wrap;
+    flex-wrap: wrap;
     position: fixed;
     width: 100%;
     top: 0;
@@ -189,13 +191,13 @@ header .img {
 
 @media (max-width: 767px) {
   section {
-    margin: 69.5px 68px 0 64px;
+    margin: 0 68px 0 64px;
   }
   section .list-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 72.58px 0 28px 0;
+    padding: 0 0 28px 0;
   }
   section .list-title h1 {
     color: #000;
@@ -230,7 +232,7 @@ header .img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 72.58px 0 28px 0;
+    margin: 72.58px 0 8px 0;
   }
   section .list-title h1 {
     color: #000;
@@ -260,11 +262,13 @@ header .img {
 section img {
   width: 100%;
   height: auto;
+  margin-top: 20px;
 }
 section .card-body {
   border: 1px solid #dedede;
   border-radius: 0 0 15px 15px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+  padding: 0 20px 0 22px;
 }
 section .card-body .author-time {
   display: flex;
@@ -273,7 +277,7 @@ section .card-body .author-time {
   align-items: start;
   justify-content: flex-start;
   font-weight: 400;
-  padding-bottom: 15px;
+  margin: 25px 0 15px 0;
 }
 section .card-body .author-time span {
   color: #211e3b;
@@ -291,7 +295,7 @@ section .card-body .author-time .time {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2% 0 0;
+  padding: 0 21px 0 0;
 }
 section .card-body .author-time .author span,
 section .card-body .author-time .time span {
@@ -304,6 +308,8 @@ section h6 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  padding: 0;
+  margin-bottom: 10px;
 }
 section p {
   color: #211e3b;
@@ -312,6 +318,7 @@ section p {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding: 0;
 }
 section .read-more {
   display: flex;
@@ -321,6 +328,7 @@ section .read-more {
   height: 40px;
   border: 1px solid #e4e4e4;
   border-radius: 4px;
+  margin: 29px 0 21px 0;
 }
 section .read-more:hover {
   background-color: #c40000;
@@ -342,8 +350,7 @@ section .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 10px;
+  margin: 0 0 96px 0;
 }
 section .pagination li {
   display: inline-block;
@@ -379,7 +386,7 @@ section .pagination li a {
   text-align: center;
   text-decoration: none;
   border-radius: 4px;
-  margin: 5px;
+  margin: 0px;
 }
 section .pagination li a:active, section .pagination li a:hover {
   color: #c40000;

@@ -1,15 +1,19 @@
 header {
   height: auto;
-  .img {
-    @include mobile {
+  @include mobile {
+    .img {
       top: 69px;
-      width: auto;
-      height: 454.493px;
-    }
-    @include desktop {
       width: 100%;
+      height: 454.493px;
+      padding: 0;
+      margin-bottom: 70px;
     }
-    width: 100%;
+  }
+  @include desktop {
+    .img {
+      width: 100%;
+      object-fit: contain;
+    }
     height: auto;
     position: relative;
   }
@@ -84,7 +88,7 @@ header {
     }
     .menu {
       @include flexSpace();
-      display: flex-wrap;
+      flex-wrap: wrap;
       position: fixed;
       width: 100%;
       top: 0;
