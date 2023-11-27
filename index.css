@@ -210,7 +210,7 @@ section .card-body .author-time {
   font-weight: 400;
   padding-bottom: 15px;
 }
-section .card-body .author-time img {
+section .card-body .author-time span {
   color: #211e3b;
   font-family: SVN-Gilroy;
   font-size: 18px;
@@ -218,7 +218,7 @@ section .card-body .author-time img {
   font-weight: 400;
   line-height: normal;
 }
-section .card-body .author-time img i {
+section .card-body .author-time span i {
   font-size: 24px;
 }
 section .card-body .author-time .author,
@@ -228,8 +228,8 @@ section .card-body .author-time .time {
   justify-content: space-between;
   padding: 0 2%;
 }
-section .card-body .author-time .author img,
-section .card-body .author-time .time img {
+section .card-body .author-time .author span,
+section .card-body .author-time .time span {
   margin-left: 5px;
 }
 section h6 {
@@ -334,8 +334,8 @@ footer {
   height: 94px;
   background-color: #000000;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 footer p {
   margin: auto 0;

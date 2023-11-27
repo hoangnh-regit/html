@@ -33,7 +33,7 @@ section {
       justify-content: flex-start;
       font-weight: 400;
       padding-bottom: 15px;
-      img {
+      span {
         @include fontStyle($color-4, $font-gyloy, 18px, 400);
         i {
           font-size: 24px;
@@ -43,7 +43,7 @@ section {
       .time {
         @include flexSpace();
         padding: 0 2%;
-        img {
+        span {
           margin-left: 5px;
         }
       }
