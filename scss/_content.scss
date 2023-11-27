@@ -6,20 +6,25 @@ section {
       @include fontStyle(#000, $font-noto-san-jp, 50px, 700);
     }
     .category {
-      @include widthHeight(144px, 40px);
+      width: 144px;
+      height: 40px;
       select {
-        @include widthHeight(100%, 100%);
+        width: 100%;
+        height: 100%;
         font-family: $font-noto-san-jp;
-        border: 1px solid #dedede;
+        border: 1px solid $color-5;
         border-radius: 4px;
       }
     }
   }
+
   img {
-    @include widthHeight(417px, 276px);
+    width: 417px;
+    height: 276px;
   }
+
   .card-body {
-    border: 1px solid #dedede;
+    border: 1px solid $color-5;
     border-radius: 0 0 15px 15px;
     margin-bottom: 70px;
     .author-time {
@@ -28,8 +33,8 @@ section {
       justify-content: flex-start;
       font-weight: 400;
       padding-bottom: 15px;
-      span {
-        @include fontStyle(#211e3b, $font-gyloy, 18px, 400);
+      img {
+        @include fontStyle($color-4, $font-gyloy, 18px, 400);
         i {
           font-size: 24px;
         }
@@ -38,31 +43,35 @@ section {
       .time {
         @include flexSpace();
         padding: 0 2%;
-        span {
+        img {
           margin-left: 5px;
         }
       }
     }
   }
+
   h6 {
-    @include fontStyle(#211e3b, $font-gyloy, 20px, 700);
+    @include fontStyle($color-4, $font-gyloy, 20px, 700);
   }
+
   p {
-    @include fontStyle(#211e3b, $font-gyloy, 18px, 400);
+    @include fontStyle($color-4, $font-gyloy, 18px, 400);
   }
+
   .read-more {
     @include flexCenter();
-    @include widthHeight(137px, 40px);
+    width: 137px;
+    height: 40px;
     border: 1px solid #e4e4e4;
     border-radius: 4px;
     &:hover {
-      background-color: $color-r;
+      background-color: $color-1;
       a {
-        color: #fff;
+        color: $color-3;
       }
     }
     a {
-      color: $color-r;
+      color: $color-1;
       display: inline-block;
       text-decoration: none;
     }
@@ -70,6 +79,7 @@ section {
       vertical-align: middle;
     }
   }
+
   .pagination {
     @include flexCenter();
     margin: 0;
@@ -80,8 +90,8 @@ section {
       &:first-child {
         font-size: 40px;
         a {
-          color: $color-r;
-          background-color: $color-p;
+          color: $color-1;
+          background-color: $color-2;
           border-radius: 50%;
         }
       }
@@ -92,19 +102,20 @@ section {
         }
       }
       a {
-        @include fontStyle(#211e3b, $font-noto-san-jp, none, 700);
-        @include widthHeight(40px, 40px);
+        @include fontStyle($color-4, $font-noto-san-jp, none, 700);
+        width: 40px;
+        height: 40px;
         display: block;
         line-height: 40px;
-        background-color: #fff;
+        background-color: $color-3;
         text-align: center;
         text-decoration: none;
         border-radius: 4px;
         margin: 5px;
         &:active,
         &:hover {
-          color: $color-r;
-          background-color: $color-p;
+          color: $color-1;
+          background-color: $color-2;
           border-radius: 50%;
         }
       }
